@@ -8,7 +8,7 @@
 - **Member 3:** Fathima hanna - Farook college
 
 ### Hosted Project Link
-[mention your project hosted project link here]
+https://github.com/Fahminvv/venue.git
 
 ## Project Description
 Our website is exclusively for Farook College students. Users must log in with their registration number and name to access features. The platform provides a comprehensive list of all college venues, including capacity details, facility descriptions, available and occupied dates. Students can conveniently check availability and book a venue for their program on their planned date and time
