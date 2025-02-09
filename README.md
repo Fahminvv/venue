@@ -28,11 +28,18 @@ Our website provides a convenient solution, allowing students to check availabil
   - html ,css,javascript
 - **Tools Used:**  
   - chatgpt,copilot
+## Implementation
+
+### For Software:
+#### Installation
+```sh
+[commands]
+```
 
 ## Project Demo
 ### Video
-[Add your demo video link here]  
-*Explain what the video demonstrates*
+https://drive.google.com/file/d/1crWsTFKl8qAvSTHtgluubCOVHumjE8ki/view?usp=drivesdk
+*"The demo video provides a step-by-step guide on using the website, including logging in with a registration number and name, searching for a venue, checking its availability, and completing the booking process."*
 
 ## Team Contributions
 - **Fahmin vv:** Idea
