@@ -33,7 +33,7 @@ Our website provides a convenient solution, allowing students to check availabil
 ### For Software:
 #### Installation
 ```sh
-[commands]
+git clone https://github.com/Fahminvv/venue.git
 ```
 
 ## Project Demo
