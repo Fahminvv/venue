@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVT (Audio-Visual Theater) - Venue Details</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            animation: fadeIn 2s;
+        }
+        .header h1 {
+            font-size: 36px;
+            color: #2c3e50;
+            margin: 0;
+        }
+        .details {
+            background: #b2dab7; /* Pastel Green */
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            border-radius: 10px; /* Rounded corners */
+            animation: slideIn 1s ease-out;
+        }
+        .details h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        .details p {
+            font-size: 18px;
+            color: #555555;
+        }
+        #calendar {
+            max-width: 50%; /* Make calendar thinner */
+            margin: 20px auto; /* Center calendar and add space above */
+            background: #b2dab7; /* Pastel Green */
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px; /* Rounded corners */
+            border: 1px solid #588157; /* Border color */
+            animation: slideIn 1.5s ease-out;
+        }
+        .flatpickr-day.occupied-day {
+            background-color: #e74c3c !important;
+            color: white !important;
+        }
+        .booking-form {
+            margin-top: 20px;
+            background: #b2dab7; /* Pastel Green */
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px; /* Rounded corners */
+            border: 1px solid #588157; /* Border color */
+            width: 50%; /* Make box thinner */
+            margin: 20px auto; /* Center box and add space above */
+            animation: fadeIn 2s;
+        }
+        .booking-form label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #555555;
+        }
+        .booking-form input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px; /* Rounded corners */
+            animation: fadeIn 2s;
+        }
+        .booking-form button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #588157; /* Sage Green */
+            color: #ffffff;
+            border: none;
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-30px); }
+            60% { transform: translateY(-15px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>AVT (Audio-Visual Theater)</h1>
+    </div>
+    <div class="details">
+        <h2>Facilities</h2>
+        <p>High-definition Projector, Sound System, AC, WiFi, Seating for 300 people, Large Screen.</p>
+    </div>
+    <div class="details">
+        <h2>Upcoming Programs</h2>
+        <p>Film Screening - 1st July 2025</p>
+    </div>
+    <div class="details">
+        <h2>Availability</h2>
+        <p>Free on 10th July 2025, 15th July 2025.</p>
+    </div>
+    <div class="details">
+        <h2>Event Calendar</h2>
+        <input type="text" id="calendar" />
+    </div>
+    <div class="booking-form">
+        <label for="booking-date">Booking Date:</label>
+        <input type="text" id="booking-date" />
+        <label for="booking-time">Booking Time:</label>
+        <input type="text" id="booking-time" />
+        <button onclick="submitBooking()">Submit Booking</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            flatpickr("#calendar", {
+                inline: true,
+                dateFormat: "Y-m-d",
+                disable: ["2025-07-01"],
+                dateClass: function(date) {
+                    const occupiedDates = ["2025-07-01"];
+                    if (occupiedDates.includes(flatpickr.formatDate(date, "Y-m-d"))) {
+                        return "occupied-day";
+                    }
+                    return "";
+                },
+                onChange: function(selectedDates, dateStr, instance) {
+                    if (selectedDates.length > 0) {
+                        alert("You selected: " + dateStr);
+                    }
+                }
+            });
+
+            flatpickr("#booking-date", {
+                dateFormat: "Y-m-d",
+                minDate: "today"
+            });
+
+            flatpickr("#booking-time", {
+                enableTime: true,
+                noCalendar: true,
+                dateFormat: "H:i"
+            });
+        });
+
+        function submitBooking() {
+            const bookingDate = document.getElementById('booking-date').value;
+            const bookingTime = document.getElementById('booking-time').value;
+            alert("Your event has been booked for " + bookingDate + " at " + bookingTime + ". Looking forward!");
+        }
+    </script>
+</body>
+</html>

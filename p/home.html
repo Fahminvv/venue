@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Venue Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: url('img.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff; /* Make text white for better contrast against dark background */
+        }
+        .container {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.6); /* Semi-transparent black background for better text readability */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            width: 80%; /* Adjust container width */
+            max-width: 600px; /* Prevent large container sizes */
+        }
+        .college-logo {
+            width: 120px; /* Increase logo size for more prominence */
+            animation: fadeIn 2s ease-in-out;
+        }
+        .college-name {
+            font-size: 36px; /* Increase font size */
+            font-weight: bold;
+            color: rgb(249, 249, 246); /* Use gold color for the college name */
+            margin: 20px 0;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5); /* Add shadow for text depth */
+            animation: slideIn 2s ease-in-out;
+        }
+        .venue-button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 20px;
+            color: white;
+            background-color: rgb(48, 96, 96);
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+        }
+        .venue-button:hover {
+            background-color: #4c6a92;
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="logo.png" alt="College Logo" class="college-logo">
+        <div class="college-name">FAROOK COLLEGE AUTONOMOUS</div>
+        <a href="venue-list.html" class="venue-button">View Venues</a>
+    </div>
+</body>
+</html>
