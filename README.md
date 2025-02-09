@@ -39,6 +39,7 @@ git clone https://github.com/Fahminvv/venue.git
 ## Project Demo
 ### Video
 https://drive.google.com/file/d/1crWsTFKl8qAvSTHtgluubCOVHumjE8ki/view?usp=drivesdk
+
 *"The demo video provides a step-by-step guide on using the website, including logging in with a registration number and name, searching for a venue, checking its availability, and completing the booking process."*
 
 ## Team Contributions
