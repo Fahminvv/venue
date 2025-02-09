@@ -25,7 +25,7 @@ Our website provides a convenient solution, allowing students to check availabil
 ### Technologies/Components Used
 #### For Software:
 - **Languages Used:**  
-  - html ,css,javascript
+  - html 
 - **Tools Used:**  
   - chatgpt,copilot
 ## Implementation
